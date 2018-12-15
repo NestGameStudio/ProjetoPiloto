@@ -4,50 +4,42 @@ using UnityEngine;
 
 public class Controls : MonoBehaviour
 {
-    public GameObject body;
-    public GameObject spirit;
-
     private GameObject currentState;
 
-    private OutOfBodyExperience changeStateScript;
+    private OutOfBodyExperience transition;
 
 
     void Start()
     {
-        if (body == null)
-        {
-            body = GameObject.FindGameObjectWithTag("Player");
-        } else if (spirit == null)
-        {
-            spirit = GameObject.FindGameObjectWithTag("Spirit");
-        }
+        transition = OutOfBodyExperience.Instance;
 
-        currentState = body;
-
-        changeStateScript = this.GetComponent<OutOfBodyExperience>();
+        currentState = transition.body;
     }
 
     void LateUpdate()
-    {
+    { 
         // Movimentação
-        var z = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
-        var y = Input.GetAxis("Vertical") * Time.deltaTime * 3.0f;
+        var rotation = Input.GetAxis("Horizontal") * Time.deltaTime * currentState.GetComponent<Properties>().RotationVelocity;
+        var x = Input.GetAxis("Horizontal") * Time.deltaTime * currentState.GetComponent<Properties>().WalkVelocity;
+        var y = Input.GetAxis("Vertical") * Time.deltaTime * currentState.GetComponent<Properties>().WalkVelocity;
 
-        currentState.transform.Rotate(0, 0, z);
+        // x no x da movimentação, refino
+
+        currentState.transform.Rotate(0, 0, rotation);
         currentState.transform.Translate(0, -y, 0);
 
         // Mecânica do espírito
         if (Input.GetKeyDown(KeyCode.F))
         {
-            if(currentState == body)
+            if(!transition.IsInSpiritState())
             {
-                changeStateScript.ReleaseSpirit(spirit, body);
-                currentState = spirit;
+                transition.ReleaseSpirit();
+                currentState = transition.spirit;
 
-            } else if (currentState == spirit)
-            {
-                changeStateScript.RetrieveSpirit(body, spirit);
-                currentState = body;
+            } else {
+
+                transition.RetrieveSpirit();
+                currentState = transition.body;
             }
         }
     }
