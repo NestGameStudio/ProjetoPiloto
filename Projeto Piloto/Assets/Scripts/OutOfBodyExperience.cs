@@ -37,8 +37,6 @@ public class OutOfBodyExperience: MonoBehaviour
         spirit.GetComponent<Properties>().Camera.SetActive(true);
 
         isSpirit = true;
-
-        Debug.Log("forma espiritual");
     }
 
     // o corpo vai expulsar o espirito na frente do corpo (idealmente na direção que ele escolher) e terão essas mudanças:
@@ -53,8 +51,6 @@ public class OutOfBodyExperience: MonoBehaviour
         spirit.SetActive(false);
 
         isSpirit = false;
-
-        Debug.Log("forma corporea");
     }
 
     public bool IsInSpiritState()
