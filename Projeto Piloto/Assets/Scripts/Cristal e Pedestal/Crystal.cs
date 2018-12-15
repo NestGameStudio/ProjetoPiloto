@@ -13,7 +13,6 @@ public class Crystal: CrystalPedestalMechanic
         if ((collision.gameObject.CompareTag("Player") && this.Type == TipoCristal.Fisico) || 
             (collision.gameObject.CompareTag("Spirit") && this.Type == TipoCristal.Espiritual)) {
 
-            IsInPlayerInventory = true;
             if (!PlayerInventory.ExceedNumberOfCrystals(Type))
             {
                 PlayerInventory.AddCrystalToInventory(this);
