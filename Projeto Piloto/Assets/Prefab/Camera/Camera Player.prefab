@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8000132250883824461}
   - component: {fileID: 8000132250883824462}
   - component: {fileID: 8000132250883824463}
-  - component: {fileID: 8000132250883824460}
+  - component: {fileID: 1063022255}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -70,7 +70,7 @@ MonoBehaviour:
   m_SoftZoneHeight: 0.8
   m_BiasX: 0
   m_BiasY: 0
---- !u!114 &8000132250883824460
+--- !u!114 &1063022255
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -82,8 +82,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa7155796051b734daa718462081dc5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: 3.128459, z: -10.899847}
+  m_BindingMode: 4
+  m_FollowOffset: {x: 0, y: 2.89424, z: -10.361863}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -114,14 +114,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8000132251250690916}
-  m_LocalRotation: {x: -0.13929886, y: 0.000000037196266, z: -0.000000049374187, w: -0.9902504}
+  m_LocalRotation: {x: 0.13930272, y: 0, z: 0, w: 0.9902499}
   m_LocalPosition: {x: -14.861267, y: -6.13, z: -18.530003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8000132250883824461}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 22.526001, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 16.015001, y: 0, z: 0}
 --- !u!114 &8000132251250690919
 MonoBehaviour:
   m_ObjectHideFlags: 0
