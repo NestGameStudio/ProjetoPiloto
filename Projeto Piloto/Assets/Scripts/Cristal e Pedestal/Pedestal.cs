@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Pedestal: CrystalPedestalMechanic
 {
+    public GameObject ActionfromObject;
+
     // Saber se há cristal no pedestal 
     [HideInInspector]
     public bool IsCrystalInPedestal = false;
@@ -23,6 +25,9 @@ public class Pedestal: CrystalPedestalMechanic
                 crystalInInventory.MechanicObject.GetComponent<MeshCollider>().enabled = false;
                 crystalInInventory.MechanicObject.transform.position = this.MechanicObject.transform.position + Vector3.up*1/3 + Vector3.left* 6/7;
                 crystalInInventory.MechanicObject.SetActive(true);
+                ActionfromObject.GetComponent<ActionTrigger>().ActionFromPedestal();
+
+
             }
         }
     }
