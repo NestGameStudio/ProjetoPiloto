@@ -332,6 +332,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 412746857}
+--- !u!114 &331146873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331146871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16e60e5d0df9bb04f8357b8704fa445c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Spirit: 0
+  Camera: {fileID: 412746857}
 --- !u!4 &331146875 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 23759923, guid: cfc852c363f22954599fb4e4293a8ff3,
@@ -493,14 +507,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1068316104, guid: cfc852c363f22954599fb4e4293a8ff3, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.00000021358629
+      objectReference: {fileID: 0}
     - target: {fileID: 6467672490561616337, guid: cfc852c363f22954599fb4e4293a8ff3,
         type: 3}
       propertyPath: m_Enabled
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1068316104, guid: cfc852c363f22954599fb4e4293a8ff3, type: 3}
-      propertyPath: m_AABB.m_Center.y
-      value: -0.00000021358629
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6467672490561616337, guid: cfc852c363f22954599fb4e4293a8ff3, type: 3}

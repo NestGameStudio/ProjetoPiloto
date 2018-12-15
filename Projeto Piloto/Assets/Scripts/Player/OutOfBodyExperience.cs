@@ -16,8 +16,8 @@ public class OutOfBodyExperience : MonoBehaviour
         spirit.transform.position = body.transform.position + Vector3.forward * 1;
         spirit.SetActive(true);
 
-        body.GetComponent<PlayerProperties>().camera.SetActive(false);
-        spirit.GetComponent<SpiritProperties>().camera.SetActive(true);
+        body.GetComponent<Properties>().Camera.SetActive(false);
+        spirit.GetComponent<Properties>().Camera.SetActive(true);
 
         Debug.Log("Soltei espirito");
     }
@@ -28,8 +28,8 @@ public class OutOfBodyExperience : MonoBehaviour
 
     public void RetrieveSpirit(GameObject body, GameObject spirit)
     {
-        body.GetComponent<PlayerProperties>().camera.SetActive(true);
-        spirit.GetComponent<SpiritProperties>().camera.SetActive(false);
+        body.GetComponent<Properties>().Camera.SetActive(true);
+        spirit.GetComponent<Properties>().Camera.SetActive(false);
 
         spirit.SetActive(false);
 
