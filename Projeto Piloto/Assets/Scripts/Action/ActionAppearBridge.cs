@@ -8,6 +8,7 @@ public class ActionAppearBridge : ActionTrigger
     {
         base.ActionFromPedestal();
 
+        this.gameObject.SetActive(true);
         Debug.Log("Aparece ponte");
     }
 }

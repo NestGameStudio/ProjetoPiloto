@@ -7,6 +7,7 @@ public class ActionOpenDoor : ActionTrigger
     public override void ActionFromPedestal()
     {
         base.ActionFromPedestal();
+        this.gameObject.SetActive(false);
 
         Debug.Log("Abre porta");
     }
