@@ -591,6 +591,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4127718729633058627}
   - component: {fileID: 2521206192156185901}
+  - component: {fileID: 1483363767}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -681,6 +682,20 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0024202466, y: 0.00000011920929, z: 0.0011584759}
     m_Extent: {x: 0.2990699, y: 0.9291211, z: 1.1416998}
   m_DirtyAABB: 0
+--- !u!136 &1483363767
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7155294851838784883}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.59
+  m_Height: 2.12
+  m_Direction: 2
+  m_Center: {x: 1.9257449, y: -0.014999603, z: 0.5123361}
 --- !u!1 &7338669861266420858
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,13 +1030,15 @@ GameObject:
   m_Component:
   - component: {fileID: 8259066819152508294}
   - component: {fileID: 4329484600133449421}
+  - component: {fileID: 1721245192}
+  - component: {fileID: 1721245193}
   m_Layer: 0
-  m_Name: Ghost Character
-  m_TagString: Untagged
+  m_Name: Spirit
+  m_TagString: Spirit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8259066819152508294
 Transform:
   m_ObjectHideFlags: 0
@@ -1049,7 +1066,7 @@ Animator:
   m_GameObject: {fileID: 9000302287388091131}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: a3b32492edffdec40b6e53a2927eeb89, type: 3}
-  m_Controller: {fileID: 9100000, guid: 50cc5aded52ffba40949ab57492820e0, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1058,6 +1075,38 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!54 &1721245192
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9000302287388091131}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 48
+  m_CollisionDetection: 0
+--- !u!114 &1721245193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9000302287388091131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16e60e5d0df9bb04f8357b8704fa445c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Spirit: 1
+  Camera: {fileID: 0}
+  WalkVelocity: 3
+  RotationVelocity: 150
 --- !u!1 &9050974630127216351
 GameObject:
   m_ObjectHideFlags: 0
@@ -1305,6 +1354,6 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0, y: -0.00000023841858, z: 0.00000011920929}
-    m_Extent: {x: 0.26877967, y: 0.5327161, z: 1.0102035}
+    m_Center: {x: 0, y: -0.00000011920929, z: 0.00000011920929}
+    m_Extent: {x: 0.26877993, y: 0.5327159, z: 1.0102036}
   m_DirtyAABB: 0
