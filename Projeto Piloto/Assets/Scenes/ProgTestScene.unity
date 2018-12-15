@@ -481,6 +481,11 @@ PrefabInstance:
       propertyPath: m_AABB.m_Center.y
       value: -0.00000021358629
       objectReference: {fileID: 0}
+    - target: {fileID: 1703575550847524459, guid: cfc852c363f22954599fb4e4293a8ff3,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 48
+      objectReference: {fileID: 0}
     - target: {fileID: 6467672490561616337, guid: cfc852c363f22954599fb4e4293a8ff3,
         type: 3}
       propertyPath: m_Enabled
@@ -843,8 +848,8 @@ MonoBehaviour:
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
   m_Priority: 10
-  m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_LookAt: {fileID: 1721245190}
+  m_Follow: {fileID: 1721245190}
   m_Lens:
     FieldOfView: 40
     OrthographicSize: 10
@@ -858,7 +863,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1721245189}
   m_PrefabAsset: {fileID: 0}
---- !u!136 &1483363765
+--- !u!136 &1483363767
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -952,7 +957,7 @@ PrefabInstance:
     - target: {fileID: 8048400529855664441, guid: c0075b3bb863186488f31bae95c051b8,
         type: 3}
       propertyPath: m_AABB.m_Center.y
-      value: -0.00000021358629
+      value: -0.00000011920929
       objectReference: {fileID: 0}
     - target: {fileID: 8048400529855664441, guid: c0075b3bb863186488f31bae95c051b8,
         type: 3}
@@ -968,6 +973,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AABB.m_Extent.z
       value: 1.0102036
+      objectReference: {fileID: 0}
+    - target: {fileID: 8048400529855664441, guid: c0075b3bb863186488f31bae95c051b8,
+        type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: 0.00000011920929
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0075b3bb863186488f31bae95c051b8, type: 3}

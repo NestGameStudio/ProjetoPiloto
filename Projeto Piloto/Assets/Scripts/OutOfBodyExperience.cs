@@ -30,7 +30,7 @@ public class OutOfBodyExperience: MonoBehaviour
     public void ReleaseSpirit()
     {
         spirit.transform.position = body.transform.position + Vector3.forward * 1;
-        spirit.transform.rotation = Quaternion.Euler(0, 0, 0);
+        spirit.transform.rotation = Quaternion.Euler(-90, 0, 0);
         spirit.SetActive(true);
 
         body.GetComponent<Properties>().Camera.SetActive(false);
