@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 576174844099989198}
   - component: {fileID: 1478776306303008938}
   - component: {fileID: 9018011127329621876}
+  - component: {fileID: 2125168887553114004}
   m_Layer: 0
   m_Name: Cristal Espiritual
   m_TagString: Espiritual Object
@@ -408,6 +409,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 0
+  MechanicObject: {fileID: 0}
+  PlayerInventory: {fileID: 0}
+  IsInPlayerInventory: 0
+--- !u!114 &2125168887553114004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9018011127329621875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a78736fda0cdb9d4ebfce99436ebe2e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 1
   MechanicObject: {fileID: 0}
   PlayerInventory: {fileID: 0}
   IsInPlayerInventory: 0

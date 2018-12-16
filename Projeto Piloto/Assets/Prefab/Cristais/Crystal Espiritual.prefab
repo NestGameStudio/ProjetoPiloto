@@ -4709,8 +4709,9 @@ GameObject:
   - component: {fileID: 1964933167}
   - component: {fileID: 2135084520388567130}
   - component: {fileID: 737825913533932869}
-  - component: {fileID: 1964933169}
   - component: {fileID: 1964933170}
+  - component: {fileID: 1218097938561999021}
+  - component: {fileID: 3677409090866793501}
   m_Layer: 0
   m_Name: Crystal Espiritual
   m_TagString: Untagged
@@ -4778,19 +4779,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &1964933169
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1964933168}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.016990922
-  m_Center: {x: -0.0009520019, y: 0.00064696494, z: -0.00050110515}
 --- !u!54 &1964933170
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4807,3 +4795,33 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1218097938561999021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964933168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a78736fda0cdb9d4ebfce99436ebe2e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 0
+  MechanicObject: {fileID: 0}
+  PlayerInventory: {fileID: 0}
+  IsInPlayerInventory: 0
+--- !u!64 &3677409090866793501
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964933168}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: a7bcb44465c289c4e8fa8f3a1f0dabbd, type: 3}
