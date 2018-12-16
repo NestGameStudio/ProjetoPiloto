@@ -177,7 +177,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 453ad5ac42dba3e46b3faba4c752c981, type: 3}
+  - {fileID: 2100000, guid: 53bad3a24a37276428f9192902c41395, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -846,14 +846,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6593229183603061552}
-  m_LocalRotation: {x: -0.0704688, y: 0.99498296, z: 0.005018346, w: 0.07083692}
+  m_LocalRotation: {x: -0.07624056, y: 0.9954258, z: -0.002084592, w: 0.057536494}
   m_LocalPosition: {x: 0.20394084, y: 0.00863413, z: 0.12148429}
   m_LocalScale: {x: 1.0000001, y: 0.99999994, z: 1.0000001}
   m_Children:
   - {fileID: 8790640910057483613}
   m_Father: {fileID: 4358436953534201967}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.26500002, y: 173.404, z: -8.744}
 --- !u!136 &6593229183603061553
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -972,7 +972,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 4300000, guid: a3b32492edffdec40b6e53a2927eeb89, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 1065377593667604f96cd4566ebac74b, type: 3}
   m_Bones:
   - {fileID: 4234933295534886439}
   - {fileID: 8790640910057483613}
@@ -1240,9 +1240,8 @@ GameObject:
   - component: {fileID: 23759923}
   - component: {fileID: 177976474358146985}
   - component: {fileID: 1703575550847524459}
-  - component: {fileID: 6467672490561616337}
   m_Layer: 0
-  m_Name: Character TRUE
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1275,7 +1274,7 @@ Animator:
   m_GameObject: {fileID: 8360852315441659157}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: a3b32492edffdec40b6e53a2927eeb89, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 08234e5e5cdff944e9ef248f44f6ba10, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1300,18 +1299,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 48
   m_CollisionDetection: 0
---- !u!114 &6467672490561616337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8360852315441659157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 481cd753beb99b7408b007bec95bc2fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1068282726
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1367,7 +1354,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2300000, guid: 453ad5ac42dba3e46b3faba4c752c981, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 453ad5ac42dba3e46b3faba4c752c981, type: 3}
 --- !u!1 &1068316102 stripped
 GameObject:
