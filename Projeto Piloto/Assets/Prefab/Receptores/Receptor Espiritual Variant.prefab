@@ -1,5 +1,22 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &7678165960540080913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8074780623534071058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7254043c217b5c6488437e3d074b357d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 0
+  MechanicObject: {fileID: 0}
+  PlayerInventory: {fileID: 0}
+  ActionFromObject: {fileID: 0}
+  IsCrystalInPedestal: 0
 --- !u!1001 &8074780623257950570
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9,7 +26,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 277595256, guid: aa94328adb74e854eb95cc0d8844282d, type: 3}
       propertyPath: m_Name
-      value: Receptor Espiritual
+      value: Receptor Espiritual Variant
       objectReference: {fileID: 0}
     - target: {fileID: 277595258, guid: aa94328adb74e854eb95cc0d8844282d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -78,3 +95,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa94328adb74e854eb95cc0d8844282d, type: 3}
+--- !u!1 &8074780623534071058 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 277595256, guid: aa94328adb74e854eb95cc0d8844282d,
+    type: 3}
+  m_PrefabInstance: {fileID: 8074780623257950570}
+  m_PrefabAsset: {fileID: 0}

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7495655309765673252}
   - component: {fileID: 8558485010276389962}
   - component: {fileID: 277595257}
+  - component: {fileID: 8986251410848606548}
   m_Layer: 0
   m_Name: Receptor Terrestre
   m_TagString: Untagged
@@ -92,6 +93,23 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 4.5
   m_Center: {x: -0.00000047683716, y: 0, z: 0.26}
+--- !u!114 &8986251410848606548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277595256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7254043c217b5c6488437e3d074b357d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 1
+  MechanicObject: {fileID: 0}
+  PlayerInventory: {fileID: 0}
+  ActionFromObject: {fileID: 0}
+  IsCrystalInPedestal: 0
 --- !u!1 &2099038518
 GameObject:
   m_ObjectHideFlags: 0
