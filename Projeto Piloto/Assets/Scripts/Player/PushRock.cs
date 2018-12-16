@@ -6,14 +6,22 @@ public class PushRock : MonoBehaviour
 {
     public float pushForce = 2.0f;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionStay(Collision collision)
     {
-        Vector3 direction = this.transform.TransformDirection(this.GetComponent<Rigidbody>().velocity);
+        if (collision.transform.CompareTag("Rock"))
+        {
+            Vector3 direction = collision.transform.position - this.transform.position;
+
+            collision.collider.attachedRigidbody.AddForceAtPosition(direction.normalized*pushForce, transform.position);
+        }
+        
+
+       /* Vector3 direction = this.transform.TransformDirection(this.GetComponent<Rigidbody>().velocity);
 
 
         Vector3 force = pushForce * direction;
         Debug.Log(force);
-        collision.collider.attachedRigidbody.AddForce(force);
+        collision.collider.attachedRigidbody.AddForce(force);*/
 
         /*Rigidbody body = collision.collider.attachedRigidbody;
 
@@ -37,14 +45,6 @@ public class PushRock : MonoBehaviour
         //animation.Play("push");
 
         Debug.Log("gsf");*/
-    }
-
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Rock"))
-        {
-            Debug.Log("Nao pode empurrar pedra");
-        }
     }
 
 }
