@@ -50,8 +50,8 @@ public class OutOfBodyExperience: MonoBehaviour
             Object.SetActive(true);
         }
 
-        //body.GetComponent<Properties>().Camera.SetActive(false);
-        //spirit.GetComponent<Properties>().Camera.SetActive(true);
+        body.GetComponent<Properties>().Camera.SetActive(false);
+        spirit.GetComponent<Properties>().Camera.SetActive(true);
 
         isSpirit = true;
     }
@@ -63,8 +63,8 @@ public class OutOfBodyExperience: MonoBehaviour
 
     public void RetrieveSpirit()
     {
-        //body.GetComponent<Properties>().Camera.SetActive(true);
-        //spirit.GetComponent<Properties>().Camera.SetActive(false);
+        body.GetComponent<Properties>().Camera.SetActive(true);
+        spirit.GetComponent<Properties>().Camera.SetActive(false);
 
         // Desativa os objetos espirituais
         foreach (GameObject Object in EspiritualObjects)
