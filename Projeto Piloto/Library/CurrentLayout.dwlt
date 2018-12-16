@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 548}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -42,8 +42,8 @@ MonoBehaviour:
     y: 0
     width: 682
     height: 947
-  m_MinSize: {x: 204, y: 224}
-  m_MaxSize: {x: 4004, y: 4024}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 175
+  controlID: 81
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -195,10 +195,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 917, y: 498}
-  m_MaxSize: {x: 22012, y: 14048}
+  m_MinSize: {x: 913, y: 498}
+  m_MaxSize: {x: 22008, y: 14048}
   vertical: 0
-  controlID: 146
+  controlID: 125
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -345,7 +345,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - "Assets/Prefab/Cen\xE1rio"
+    - "Assets/Prefab/Mec\xE2nicas"
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
@@ -357,7 +357,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 9a460000
     m_LastClickedID: 18074
-    m_ExpandedIDs: 0000000046390000083a0000223a0000363a0000623a0000e83b0000f63b0000763c0000a43c0000443d00006c3d0000963d0000ea3d0000ee3d00004c3e0000503e0000183f0000
+    m_ExpandedIDs: 0000000018290000ea290000042a0000182a0000442a0000422b0000442b0000462b0000e62b0000f62b00007c2c0000aa2c0000202d0000b02d0000d42d0000da2d00000a2e00006c2e0000722e0000ca2e0000ce2e0000f22e0000242f00009a2f0000ae2f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -382,21 +382,21 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 120}
+    scrollPos: {x: 0, y: 281}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff0000000046390000083a0000223a0000363a0000623a00004c3b00004e3b0000503b0000e83b0000f63b0000763c0000a43c0000fe3c0000443d0000683d00006c3d0000963d0000ee3d0000f43d00004c3e0000503e0000743e0000a43e0000183f00002a3f0000
+    m_ExpandedIDs: ffffffff0000000018290000ea290000042a0000422b0000442b0000e62b00007c2c0000aa2c0000202d0000b02d0000da2d00000a2e0000ca2e0000ce2e0000242f00009a2f0000ae2f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Ponte
-      m_OriginalName: Ponte
+      m_Name: Terreno2
+      m_OriginalName: Terreno2
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 14990
+      m_UserData: 10886
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -552,9 +552,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -270.4263, y: -142.8165, z: 399.97714}
+    m_Target: {x: -2.7101665, y: -2.6284566, z: -198.6614}
     speed: 2
-    m_Value: {x: -270.4263, y: -142.8165, z: 399.97714}
+    m_Value: {x: -2.7101665, y: -2.6284566, z: -198.6614}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -582,13 +582,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.003157389, y: 0.9826594, z: -0.18462965, w: 0.016806722}
+    m_Target: {x: -0.04779218, y: 0.9317094, z: -0.3345406, w: -0.13310196}
     speed: 2
-    m_Value: {x: 0.003157389, y: 0.9826594, z: -0.18462965, w: 0.016806722}
+    m_Value: {x: -0.04779218, y: 0.9317094, z: -0.3345406, w: -0.13310196}
   m_Size:
-    m_Target: 408.11008
+    m_Target: 39.22201
     speed: 2
-    m_Value: 408.11008
+    m_Value: 39.22201
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -629,23 +629,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 14a5ffff
-      m_LastClickedID: -23276
-      m_ExpandedIDs: 20a5ffff42aaffffceabffff24aeffff7ab6ffff38b9ffff20e2fffffee8ffff52440000944400009c440000084500002e6e00006c6e00007c6e0000b06e0000b66e0000146f0000
+      m_SelectedIDs: 54f3ffff
+      m_LastClickedID: -3244
+      m_ExpandedIDs: 40a5ffff44a5ffffcea7ffffd2a7ffffd8a7ffffe2a7ffff22c4ffff26c4ffff2ac4ffff3efaffff8430000008310000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Porta 1 (2)
+        m_OriginalName: Porta 1 (2)
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -23228
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 5}
       m_SearchString: 
