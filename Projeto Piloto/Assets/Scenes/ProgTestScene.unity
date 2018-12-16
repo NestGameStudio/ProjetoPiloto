@@ -133,7 +133,7 @@ MonoBehaviour:
   Type: 1
   MechanicObject: {fileID: 0}
   PlayerInventory: {fileID: 0}
-  ActionfromObject: {fileID: 0}
+  ActionFromObject: {fileID: 0}
   IsCrystalInPedestal: 0
 --- !u!1 &96819404
 GameObject:
@@ -1612,7 +1612,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17230
+  m_Name: pb_Mesh-1400
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
