@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Porta
+  m_Name: Bridge
   m_Shader: {fileID: 4800000, guid: 9c6ece3d5ef8bb84db19471daaf6c788, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -64,7 +64,7 @@ Material:
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _LightSmoothness: 0
-    - _LightThreshold: 0.242
+    - _LightThreshold: 0.562
     - _MKEditorShowDetailBehavior: 0
     - _MKEditorShowDissolveBehavior: 0
     - _MKEditorShowLightBehavior: 1
@@ -83,10 +83,10 @@ Material:
     - _OutlineSize: 0
     - _Parallax: 0.02
     - _RimIntensity: 0
-    - _RimSize: 0.08
+    - _RimSize: 0.42
     - _RimSmoothness: 0
-    - _ShadowIntensity: 0.41
-    - _Shininess: 0.399
+    - _ShadowIntensity: 1
+    - _Shininess: 0.01
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SpecularIntensity: 0
