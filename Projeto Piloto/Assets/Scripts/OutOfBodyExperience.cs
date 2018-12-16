@@ -40,8 +40,8 @@ public class OutOfBodyExperience: MonoBehaviour
 
     public void ReleaseSpirit()
     {
-        spirit.transform.position = body.transform.position + Vector3.forward * 1;
-        spirit.transform.rotation = Quaternion.Euler(-90, 0, 0);
+        spirit.transform.position = body.transform.position + Vector3.forward * (-1);
+        spirit.transform.rotation = Quaternion.Euler(-90, 180, 0);
         spirit.SetActive(true);
 
         // Ativa os objetos espirituais
@@ -50,8 +50,8 @@ public class OutOfBodyExperience: MonoBehaviour
             Object.SetActive(true);
         }
 
-        body.GetComponent<Properties>().Camera.SetActive(false);
-        spirit.GetComponent<Properties>().Camera.SetActive(true);
+        //body.GetComponent<Properties>().Camera.SetActive(false); -- comentei isso para não criar a nova camera para o espirito
+        //spirit.GetComponent<Properties>().Camera.SetActive(true);
 
         isSpirit = true;
     }
