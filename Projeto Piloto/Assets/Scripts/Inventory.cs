@@ -35,6 +35,7 @@ public class Inventory : MonoBehaviour
         {
             if(crystal.Type == type)
             {
+                CrystalsInInventory.Remove(crystal);
                 return crystal;
             }
         }

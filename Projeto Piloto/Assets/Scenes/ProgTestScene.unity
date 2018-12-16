@@ -495,7 +495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc46165a19a9479449f39199cf8763ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pushForce: 2
+  pushForce: 15
 --- !u!114 &331146873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -862,8 +862,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 858644502}
-  m_LocalRotation: {x: 0.12821515, y: -0.04432978, z: 0.3237883, w: 0.93635297}
-  m_LocalPosition: {x: -14.861267, y: -6.364221, z: -17.99202}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -12.781267, y: -10.348461, z: -7.6301556}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 429939647}
@@ -1182,7 +1182,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17334
+  m_Name: pb_Mesh12380
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -1946,7 +1946,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!1001 &1052096811577340201
 PrefabInstance:
@@ -2221,7 +2221,7 @@ PrefabInstance:
     - target: {fileID: 6683242995250462505, guid: bd57aff80b0b5b6429a013109d8c7a39,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.83
+      value: 1.42
       objectReference: {fileID: 0}
     - target: {fileID: 6683242995250462505, guid: bd57aff80b0b5b6429a013109d8c7a39,
         type: 3}
@@ -2267,6 +2267,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683242995250462505, guid: bd57aff80b0b5b6429a013109d8c7a39,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.3373
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd57aff80b0b5b6429a013109d8c7a39, type: 3}
@@ -2349,25 +2354,3 @@ PrefabInstance:
       objectReference: {fileID: 331146875}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61fa024cf8bd32749b9bdc0daf52d5f6, type: 3}
---- !u!1 &9018011126822385081 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4720647140840619521, guid: 184a0251c78b9064b84b6f24b3319540,
-    type: 3}
-  m_PrefabInstance: {fileID: 4370025214084385720}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &9018011126822385082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9018011126822385081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a78736fda0cdb9d4ebfce99436ebe2e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Type: 1
-  MechanicObject: {fileID: 0}
-  PlayerInventory: {fileID: 0}
-  IsInPlayerInventory: 0
