@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2435001714984016510}
   - component: {fileID: 6339997888123606846}
   - component: {fileID: 8719294614662268981}
+  - component: {fileID: 39263084}
   m_Layer: 0
   m_Name: Receptor Espiritual
   m_TagString: Untagged
@@ -94348,3 +94349,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 0}
+--- !u!114 &39263084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308526036658874924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7254043c217b5c6488437e3d074b357d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 0
+  MechanicObject: {fileID: 0}
+  PlayerInventory: {fileID: 0}
+  ActionfromObject: {fileID: 0}
+  IsCrystalInPedestal: 0

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Pedestal: CrystalPedestalMechanic
 {
-    public GameObject ActionfromObject;
+    public GameObject ActionFromObject;
 
     // Saber se há cristal no pedestal 
     [HideInInspector]
