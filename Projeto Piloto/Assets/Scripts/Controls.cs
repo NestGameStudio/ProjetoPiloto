@@ -7,7 +7,7 @@ public class Controls : MonoBehaviour
     private GameObject currentState;
 
     private OutOfBodyExperience transition;
-
+   
 
     void Start()
     {
@@ -17,7 +17,7 @@ public class Controls : MonoBehaviour
     }
 
     void LateUpdate()
-    { 
+    {
         // Movimentação
         var rotation = Input.GetAxis("Horizontal") * Time.deltaTime * currentState.GetComponent<Properties>().RotationVelocity;
         var x = Input.GetAxis("Horizontal") * Time.deltaTime * currentState.GetComponent<Properties>().WalkVelocity;
@@ -27,6 +27,7 @@ public class Controls : MonoBehaviour
 
         currentState.transform.Rotate(0, 0, rotation);
         currentState.transform.Translate(0, -y, 0);
+
 
         // Mecânica do espírito
         if (Input.GetKeyDown(KeyCode.F))
