@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fd49737173d044aefaeff72db93c2c34
+guid: a64e5c5158299ce48a17feff5a831a97
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -11,10 +11,7 @@ TrueTypeFontImporter:
   fontName: Lora
   fontNames:
   - Lora
-  fallbackFontReferences:
-  - {fileID: 12800000, guid: 7ea169331fba44bb6a6544a5b8056c63, type: 3}
-  - {fileID: 12800000, guid: 3f7eb41d039304724b71ae65ff301fbd, type: 3}
-  - {fileID: 12800000, guid: 155b1a3d26f1a47fd97ea169facd3575, type: 3}
+  fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
