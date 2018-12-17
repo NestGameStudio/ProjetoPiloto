@@ -10,9 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1072369703182542079}
   - component: {fileID: 2110925316}
+  - component: {fileID: 520475528}
+  - component: {fileID: 520475529}
   m_Layer: 0
   m_Name: Character Mask
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,6 +50,35 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 48
   m_CollisionDetection: 0
+--- !u!114 &520475528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110925314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc46165a19a9479449f39199cf8763ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pushForce: 20
+--- !u!114 &520475529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110925314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16e60e5d0df9bb04f8357b8704fa445c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Spirit: 0
+  Camera: {fileID: 0}
+  WalkVelocity: 3
+  RotationVelocity: 150
 --- !u!136 &3791564146978274652
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -869,7 +900,7 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0, y: -0.6965445, z: -0.6126348}
+    m_Center: {x: 0.000000059604645, y: -0.6965443, z: -0.612635}
     m_Extent: {x: 0.8592215, y: 1.4155895, z: 0.6837642}
   m_DirtyAABB: 0
 --- !u!1001 &3791564146978241529
