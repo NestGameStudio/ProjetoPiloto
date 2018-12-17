@@ -50,8 +50,8 @@ public class OutOfBodyExperience: MonoBehaviour
             Object.SetActive(true);
         }
 
-        //body.GetComponent<Properties>().Camera.SetActive(false); -- comentei isso para não criar a nova camera para o espirito
-        //spirit.GetComponent<Properties>().Camera.SetActive(true);
+        body.GetComponent<Properties>().Camera.SetActive(false);
+        spirit.GetComponent<Properties>().Camera.SetActive(true);
 
         isSpirit = true;
     }
