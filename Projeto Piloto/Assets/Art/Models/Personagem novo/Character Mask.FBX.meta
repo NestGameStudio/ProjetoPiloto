@@ -6,17 +6,52 @@ ModelImporter:
     100000: //RootNode
     100002: Cylinder001
     100004: Object001
+    100006: Sphere001
     400000: //RootNode
     400002: Cylinder001
     400004: Object001
+    400006: Sphere001
     2100000: No Name
+    2100002: Eye
+    2100004: Face 1
+    2100006: Face 2
+    2100008: Cape 2
+    2100010: Cape 1
     2300000: Cylinder001
     2300002: Object001
+    2300004: Sphere001
     3300000: Cylinder001
     3300002: Object001
+    3300004: Sphere001
     4300000: Object001
     4300002: Cylinder001
-  externalObjects: {}
+    4300004: Sphere001
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cape 1
+    second: {fileID: 2100000, guid: 41e3eae00c369fc499a9306b01cb3e8d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cape 2
+    second: {fileID: 2100000, guid: a7feecba0093142429dd197b6525b130, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eye
+    second: {fileID: 2100000, guid: 5dee06cf628149446980fb0a2a6d09a6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Face 1
+    second: {fileID: 2100000, guid: 1c20f966efaa72946854114174ea1dd0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Face 2
+    second: {fileID: 2100000, guid: ce1eb3ee18f4eec4e88c33205f4e796e, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
