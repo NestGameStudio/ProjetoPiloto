@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1072369703182542079}
   - component: {fileID: 2110925316}
+  - component: {fileID: 8212861602910165253}
   - component: {fileID: 520475528}
   - component: {fileID: 520475529}
   m_Layer: 0
@@ -50,6 +51,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 48
   m_CollisionDetection: 0
+--- !u!136 &8212861602910165253
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110925314}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.63
+  m_Height: 2.85
+  m_Direction: 2
+  m_Center: {x: 0, y: -0.7, z: -0.1}
 --- !u!114 &520475528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -900,7 +915,7 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0.000000059604645, y: -0.6965443, z: -0.612635}
+    m_Center: {x: 0, y: -0.6965445, z: -0.6126348}
     m_Extent: {x: 0.8592215, y: 1.4155895, z: 0.6837642}
   m_DirtyAABB: 0
 --- !u!1001 &3791564146978241529
@@ -982,7 +997,8 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.05
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2300002, guid: b9a8bd825ab804741b9d66b60d546e76, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b9a8bd825ab804741b9d66b60d546e76, type: 3}
 --- !u!4 &3791564146977841529 stripped
 Transform:
