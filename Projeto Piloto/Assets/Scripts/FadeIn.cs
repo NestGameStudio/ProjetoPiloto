@@ -7,12 +7,14 @@ public class FadeIn : MonoBehaviour
     Texture2D blk;
     public bool fade;
     public float alph;
-    public GameObject flowchart;
+    public GameObject flowchart1;
 
     void Start()
     {
         //make a tiny black texture
-        flowchart.SetActive(false);
+        flowchart1.SetActive(false);
+      
+
         blk = new Texture2D(1, 1);
         blk.SetPixel(0, 0, new Color(0, 0, 0, 0));
         blk.Apply();
@@ -51,7 +53,7 @@ public class FadeIn : MonoBehaviour
         }
         if (alph == 0.0)
         {
-            flowchart.SetActive(true);
+            flowchart1.SetActive(true);
         }
 
 
