@@ -12,12 +12,10 @@ public class KillPlayer : MonoBehaviour
         if (other.CompareTag("Spirit"))
         {
             transition.RetrieveSpirit();
-            Debug.Log("Espirito Morreu");
         }
         else if (other.CompareTag("Player"))
         {
             other.transform.position = SpawnPoint;
-            Debug.Log("Player Morreu");
         }
 
     }
