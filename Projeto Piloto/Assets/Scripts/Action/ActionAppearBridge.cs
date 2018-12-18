@@ -8,6 +8,7 @@ public class ActionAppearBridge : ActionTrigger
     {
         base.ActionFromPedestal();
 
+        gameObject.GetComponent <Animator> ().Play("Ponte aparecendo");
         this.gameObject.SetActive(true);
         Debug.Log("Aparece ponte");
     }
