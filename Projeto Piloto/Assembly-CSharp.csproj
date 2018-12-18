@@ -666,6 +666,7 @@
     <Compile Include="Assets\Camera\ProBuilder\ProCore\ProBuilder\API Examples\Vertex Colors\HighlightNearestFace.cs" />
     <Compile Include="Assets\FungusExamples\FungusLua\Bindings\CustomScript.cs" />
     <Compile Include="Assets\FungusExamples\MonoBehEvents\SpriteColorChangeFromFungusMouseEvent.cs" />
+    <Compile Include="Assets\KillPlayer.cs" />
     <Compile Include="Assets\Scripts\Action\ActionAppearBridge.cs" />
     <Compile Include="Assets\Scripts\Action\ActionOpenDoor.cs" />
     <Compile Include="Assets\Scripts\Action\ActionTrigger.cs" />

@@ -9,6 +9,7 @@ TagManager:
   - Rock
   - Laser
   - Enemy
+  - DeathZone
   layers:
   - Default
   - TransparentFX
