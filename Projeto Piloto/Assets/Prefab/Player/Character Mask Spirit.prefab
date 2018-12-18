@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4932523936775396831}
   - component: {fileID: 4955629223843903436}
-  - component: {fileID: 3280505319002667012}
+  - component: {fileID: 1308938291}
   m_Layer: 9
   m_Name: Character Mask Spirit
   m_TagString: Spirit
@@ -49,7 +49,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 48
   m_CollisionDetection: 0
---- !u!114 &3280505319002667012
+--- !u!114 &1308938291
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -63,8 +63,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Spirit: 1
   Camera: {fileID: 0}
-  WalkVelocity: 3
-  RotationVelocity: 150
+  WalkVelocity: 9
+  RotationVelocity: 200
 --- !u!1 &780185019300935530
 GameObject:
   m_ObjectHideFlags: 0

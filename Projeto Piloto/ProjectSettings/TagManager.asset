@@ -7,6 +7,8 @@ TagManager:
   - Spirit
   - Espiritual Object
   - Rock
+  - Laser
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -19,8 +21,8 @@ TagManager:
   - PostProcessing
   - Spirit
   - SpiritObject
-  - 
-  - 
+  - Cristal
+  - Player
   - 
   - 
   - 
