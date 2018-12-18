@@ -27,7 +27,7 @@ public class OutOfBodyExperience: MonoBehaviour
         foreach (GameObject Object in GameObject.FindGameObjectsWithTag("Espiritual Object"))
         {
             EspiritualObjects.Add(Object);
-            Object.SetActive(false);
+            //Object.SetActive(false);
         }
 
     }
