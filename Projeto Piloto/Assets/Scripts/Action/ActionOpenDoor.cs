@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class ActionOpenDoor : ActionTrigger
 {
+    public Animator Door;
     public override void ActionFromPedestal()
     {
         base.ActionFromPedestal();
-        this.gameObject.SetActive(false);
+        //this.gameObject.SetActive(false);
+
+        Door.Play("Porta Abrindo");
 
         Debug.Log("Abre porta");
     }
