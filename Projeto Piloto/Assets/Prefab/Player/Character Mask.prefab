@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 520475528}
   - component: {fileID: 520475529}
   - component: {fileID: 2869313089917803363}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Character Mask
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc46165a19a9479449f39199cf8763ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pushForce: 2000
+  pushForce: 500
 --- !u!114 &520475529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,7 +94,7 @@ MonoBehaviour:
   Spirit: 1
   Camera: {fileID: 0}
   WalkVelocity: 9
-  RotationVelocity: 20
+  RotationVelocity: 250
 --- !u!136 &2869313089917803363
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -930,8 +930,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: -0.000015258789, y: -0.6965445, z: -0.612648}
-    m_Extent: {x: 1.5057071, y: 1.4156414, z: 1.5770407}
+    m_Center: {x: 0.0000038146973, y: -0.6965449, z: -0.6126423}
+    m_Extent: {x: 0.8592214, y: 1.4155892, z: 0.68376327}
   m_DirtyAABB: 0
 --- !u!1001 &3791564146978241529
 PrefabInstance:
@@ -944,9 +944,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Character Mask
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b9a8bd825ab804741b9d66b60d546e76, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: b9a8bd825ab804741b9d66b60d546e76, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: b9a8bd825ab804741b9d66b60d546e76, type: 3}
       propertyPath: m_Name
       value: Character - Mover isso
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: b9a8bd825ab804741b9d66b60d546e76, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: b9a8bd825ab804741b9d66b60d546e76, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b9a8bd825ab804741b9d66b60d546e76, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1046,6 +1062,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2171850652458282301, guid: 55a4921cecb8edf468a220cd6d21bf65,
         type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2171850652458282301, guid: 55a4921cecb8edf468a220cd6d21bf65,
+        type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -1113,6 +1134,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.0000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428017989689337968, guid: 55a4921cecb8edf468a220cd6d21bf65,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55a4921cecb8edf468a220cd6d21bf65, type: 3}
