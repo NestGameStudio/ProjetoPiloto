@@ -53,6 +53,13 @@ public class OutOfBodyExperience: MonoBehaviour
         body.GetComponent<Properties>().Camera.SetActive(false);
         spirit.GetComponent<Properties>().Camera.SetActive(true);
 
+        if (this.GetComponent<Inventory>().CheckIfCrystalAvailable(TipoCristal.Espiritual)) {
+            spirit.transform.gameObject.GetComponentInChildren<ParticleSystem>(true).transform.parent.gameObject.SetActive(true);
+        }
+        else {
+            spirit.transform.gameObject.GetComponentInChildren<ParticleSystem>(true).transform.parent.gameObject.SetActive(false);
+        }
+
         isSpirit = true;
     }
 
@@ -73,6 +80,16 @@ public class OutOfBodyExperience: MonoBehaviour
         }
 
         spirit.SetActive(false);
+
+        if (this.GetComponent<Inventory>().CheckIfCrystalAvailable(TipoCristal.Fisico))
+        {
+            body.transform.gameObject.GetComponentInChildren<ParticleSystem>(true).transform.parent.gameObject.SetActive(true);
+
+        }
+        else
+        {
+            body.transform.gameObject.GetComponentInChildren<ParticleSystem>(true).transform.parent.gameObject.SetActive(false);
+        }
 
         isSpirit = false;
     }

@@ -36,6 +36,16 @@ public class Inventory : MonoBehaviour
             if(crystal.Type == type)
             {
                 CrystalsInInventory.Remove(crystal);
+
+                if (crystal.Type == TipoCristal.Fisico)
+                {
+                    transition.body.gameObject.GetComponentInChildren<ParticleSystem>(true).transform.parent.gameObject.SetActive(false);
+                }
+                else if (crystal.Type == TipoCristal.Espiritual)
+                {
+                    transition.spirit.gameObject.GetComponentInChildren<ParticleSystem>(true).transform.parent.gameObject.SetActive(false);
+                }
+
                 return crystal;
             }
         }
@@ -45,6 +55,15 @@ public class Inventory : MonoBehaviour
     public void AddCrystalToInventory(Crystal crystal)
     {
         CrystalsInInventory.Add(crystal);
+
+        if (crystal.Type == TipoCristal.Fisico && CheckIfCrystalAvailable(TipoCristal.Fisico))
+        {
+            transition.body.gameObject.GetComponentInChildren<ParticleSystem>(true).transform.parent.gameObject.SetActive(true);
+        } else if (crystal.Type == TipoCristal.Espiritual && CheckIfCrystalAvailable(TipoCristal.Espiritual))
+        {
+            transition.spirit.gameObject.GetComponentInChildren<ParticleSystem>(true).transform.parent.gameObject.SetActive(true);
+        }
+
 
         // se o objeto for espiritual, retira-o da lista de objetos espirituais do OutOfBodyExperience
         if (crystal.Type == TipoCristal.Espiritual)
