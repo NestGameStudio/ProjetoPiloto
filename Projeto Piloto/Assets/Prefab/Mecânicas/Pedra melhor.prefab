@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3107267821039478243}
   - component: {fileID: 1227615566829817918}
   - component: {fileID: 431674442}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Pedra melhor
   m_TagString: Rock
   m_Icon: {fileID: 0}
