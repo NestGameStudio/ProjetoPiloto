@@ -7,15 +7,15 @@ public class OutOfBodyExperience: MonoBehaviour
     [HideInInspector]
     public static OutOfBodyExperience Instance;
 
-    public GameObject body;
-    public GameObject spirit;
-
-    public static OutOfBodyExperience getInstance() { return Instance; }
-
-    private bool isSpirit = false;
+    public GameObject Player;
 
     [HideInInspector]
     public List<GameObject> EspiritualObjects = new List<GameObject>();
+
+    private GameObject body;
+    private GameObject spirit;
+
+    public static OutOfBodyExperience getInstance() { return Instance; }
 
     private void Awake()
     {
@@ -30,6 +30,15 @@ public class OutOfBodyExperience: MonoBehaviour
             //Object.SetActive(false);
         }
 
+        foreach(Transform child in Player.GetComponentsInChildren<Transform>(true)) {
+
+            if (child.CompareTag("Physical Body")) {
+                body = child.gameObject;
+            } else if (child.CompareTag("Spirit Body")) {
+                spirit = child.gameObject;
+            }
+        }
+
     }
 
     // o corpo vai expulsar o espirito na frente do corpo (idealmente na direção que ele escolher) e terão essas mudanças:
@@ -38,20 +47,10 @@ public class OutOfBodyExperience: MonoBehaviour
     // - uma segunda camera é criada e passa a seguir e olhar para o espírito
     // - ativa a visibilidade de objetos espirituais
 
-    public void ReleaseSpirit()
-    {
-        spirit.transform.position = body.transform.position + Vector3.forward * (-1);
-        spirit.transform.rotation = Quaternion.Euler(-90, 180, 0);
+    public void ReleaseSpirit() {
+
+        body.SetActive(false);
         spirit.SetActive(true);
-
-        // Ativa os objetos espirituais
-       /*foreach (GameObject Object in EspiritualObjects)
-        {
-            Object.SetActive(true);
-        }*/
-
-        body.GetComponent<Properties>().Camera.SetActive(false);
-        spirit.GetComponent<Properties>().Camera.SetActive(true);
 
         if (this.GetComponent<Inventory>().CheckIfCrystalAvailable(TipoCristal.Espiritual)) {
             spirit.transform.gameObject.GetComponentInChildren<ParticleSystem>(true).transform.parent.gameObject.SetActive(true);
@@ -59,8 +58,6 @@ public class OutOfBodyExperience: MonoBehaviour
         else {
             spirit.transform.gameObject.GetComponentInChildren<ParticleSystem>(true).transform.parent.gameObject.SetActive(false);
         }
-
-        isSpirit = true;
     }
 
     // o corpo vai expulsar o espirito na frente do corpo (idealmente na direção que ele escolher) e terão essas mudanças:
@@ -70,33 +67,32 @@ public class OutOfBodyExperience: MonoBehaviour
 
     public void RetrieveSpirit()
     {
-        body.GetComponent<Properties>().Camera.SetActive(true);
-        spirit.GetComponent<Properties>().Camera.SetActive(false);
-
-        // Desativa os objetos espirituais
-        /*foreach (GameObject Object in EspiritualObjects)
-        {
-            Object.SetActive(false);
-        }*/
 
         spirit.SetActive(false);
+        body.SetActive(true);
 
         if (this.GetComponent<Inventory>().CheckIfCrystalAvailable(TipoCristal.Fisico))
         {
             body.transform.gameObject.GetComponentInChildren<ParticleSystem>(true).transform.parent.gameObject.SetActive(true);
-
         }
         else
         {
             body.transform.gameObject.GetComponentInChildren<ParticleSystem>(true).transform.parent.gameObject.SetActive(false);
         }
+    }
 
-        isSpirit = false;
+    public GameObject getCurrentStateBody() {
+        
+        if (spirit.activeSelf) {
+            return spirit;
+        } else {
+            return body;
+        }
     }
 
     public bool IsInSpiritState()
     {
-        return isSpirit;
+        return spirit.activeSelf;
     }
 
 }

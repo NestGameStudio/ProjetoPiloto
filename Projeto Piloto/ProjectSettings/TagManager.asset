@@ -4,12 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Spirit
   - Espiritual Object
   - Rock
   - Laser
   - Enemy
   - DeathZone
+  - Physical Body
+  - Spirit Body
   layers:
   - Default
   - TransparentFX

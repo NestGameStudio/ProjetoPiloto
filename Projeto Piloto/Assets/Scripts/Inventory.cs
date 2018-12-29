@@ -39,11 +39,11 @@ public class Inventory : MonoBehaviour
 
                 if (crystal.Type == TipoCristal.Fisico)
                 {
-                    transition.body.gameObject.GetComponentInChildren<ParticleSystem>(true).transform.parent.gameObject.SetActive(false);
+                    transition.getCurrentStateBody().gameObject.GetComponentInChildren<ParticleSystem>(true).transform.parent.gameObject.SetActive(false);
                 }
                 else if (crystal.Type == TipoCristal.Espiritual)
                 {
-                    transition.spirit.gameObject.GetComponentInChildren<ParticleSystem>(true).transform.parent.gameObject.SetActive(false);
+                    transition.getCurrentStateBody().gameObject.GetComponentInChildren<ParticleSystem>(true).transform.parent.gameObject.SetActive(false);
                 }
 
                 return crystal;
@@ -58,10 +58,10 @@ public class Inventory : MonoBehaviour
 
         if (crystal.Type == TipoCristal.Fisico && CheckIfCrystalAvailable(TipoCristal.Fisico))
         {
-            transition.body.gameObject.GetComponentInChildren<ParticleSystem>(true).transform.parent.gameObject.SetActive(true);
+            transition.getCurrentStateBody().gameObject.GetComponentInChildren<ParticleSystem>(true).transform.parent.gameObject.SetActive(true);
         } else if (crystal.Type == TipoCristal.Espiritual && CheckIfCrystalAvailable(TipoCristal.Espiritual))
         {
-            transition.spirit.gameObject.GetComponentInChildren<ParticleSystem>(true).transform.parent.gameObject.SetActive(true);
+            transition.getCurrentStateBody().gameObject.GetComponentInChildren<ParticleSystem>(true).transform.parent.gameObject.SetActive(true);
         }
 
 

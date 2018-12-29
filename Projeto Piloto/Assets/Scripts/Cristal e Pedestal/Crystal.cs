@@ -10,16 +10,20 @@ public class Crystal: CrystalPedestalMechanic
 
     private void OnCollisionEnter(Collision collision)
     {
-        if ((collision.gameObject.CompareTag("Player") && this.Type == TipoCristal.Fisico) || 
-            (collision.gameObject.CompareTag("Spirit") && this.Type == TipoCristal.Espiritual)) {
+        foreach (Transform child in collision.gameObject.GetComponentInChildren<Transform>()) {
 
-            if (!PlayerInventory.ExceedNumberOfCrystals(Type))
-            {
-                PlayerInventory.AddCrystalToInventory(this);
-                IsInPlayerInventory = true;
-                MechanicObject.SetActive(false);
+            if ((child.gameObject.CompareTag("Physical Body") && this.Type == TipoCristal.Fisico) ||
+            (child.gameObject.CompareTag("Spirit Body") && this.Type == TipoCristal.Espiritual)) {
+
+                if (!PlayerInventory.ExceedNumberOfCrystals(Type)) {
+                    PlayerInventory.AddCrystalToInventory(this);
+                    IsInPlayerInventory = true;
+                    MechanicObject.SetActive(false);
+                }
+
             }
 
         }
+      
     }
 }

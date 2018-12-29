@@ -671,13 +671,13 @@
     <Compile Include="Assets\Scripts\Action\ActionOpenDoor.cs" />
     <Compile Include="Assets\Scripts\Action\ActionTrigger.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
-    <Compile Include="Assets\Scripts\Controls.cs" />
     <Compile Include="Assets\Scripts\Cristal e Pedestal\Crystal.cs" />
     <Compile Include="Assets\Scripts\Cristal e Pedestal\CrystalPedestalMechanic.cs" />
     <Compile Include="Assets\Scripts\Cristal e Pedestal\Pedestal.cs" />
     <Compile Include="Assets\Scripts\FadeIn.cs" />
     <Compile Include="Assets\Scripts\Inventory.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />
+    <Compile Include="Assets\Scripts\Player\ChangeForm.cs" />
     <Compile Include="Assets\Scripts\Player\MoveControl.cs" />
     <Compile Include="Assets\Scripts\Player\OutOfBodyExperience.cs" />
     <Compile Include="Assets\Scripts\Player\Properties.cs" />
