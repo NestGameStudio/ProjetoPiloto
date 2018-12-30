@@ -4,7 +4,8 @@ public class MoveControl: MonoBehaviour
 { 
     [Header ("Movimentation Configuration")]
     public float WalkVelocity = 1.5f;
-    public float RotationSlower = 5;
+    public float RotationVelocity = 2;
+    public float DelayStartWalking = 0.3f;
 
     public float ForwardAngle = 180;
 
@@ -40,7 +41,7 @@ public class MoveControl: MonoBehaviour
     {
         // Esperar o jogador rotacionar até certo ponto para fazer sua translação
         Rotation();
-        if (rotationTime > 0.15f) {
+        if (rotationTime > DelayStartWalking) {
             Translation();
         }
     }
@@ -64,23 +65,30 @@ public class MoveControl: MonoBehaviour
     // Função responsável pela rotação do personagem
     private void Rotation() {
 
-        Vector3 directionVector = objectAxisSupport.transform.TransformDirection(initialRotation);
-        float angle = Vector3.SignedAngle(transform.position.normalized, objectAxisSupport.transform.TransformDirection(directionVector).normalized, Vector3.up);
-        Quaternion direction = Quaternion.Euler(0, angle, 0); 
-
-        // Pega as direções do input
         if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0) {
 
+            // Aumenta lentamente o valor até 1 para que a rotação ocorra lentamente até que se chegue na direção desejada e não continue mais
+            if (rotationTime < 1) {
+                rotationTime += Time.deltaTime * RotationVelocity;
+
+                if (rotationTime > 1) {
+                    rotationTime = 1;
+                }
+            }
+
             // Calcula a direção que o objeto deve se rotacionar
-            directionVector = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            Vector3 directionVector = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
             // Pega o angulo com seu respectivo sinal a partir da posição do objeto e a direção desejada
             // O vetor de posição do objeto está normalizado se resumindo ao seu vetor canônico (0s e 1s)
             // O vetor da direção desejada está transformado em coordenadas globais e apoiados com referência ao objeto suporte
-            angle = Vector3.SignedAngle(transform.position.normalized, objectAxisSupport.transform.TransformDirection(directionVector).normalized, Vector3.up);
+            float angle = Vector3.SignedAngle(objectAxisSupport.transform.position.normalized, objectAxisSupport.transform.TransformDirection(directionVector).normalized, Vector3.up);
 
             // Direção do vetor em Quaternions
-            direction = Quaternion.Euler(0, angle, 0);
+            Quaternion direction = Quaternion.Euler(0, angle, 0);
+
+            // Rotaciona o objeto na direção desejada até que se esteja no eixo desejado
+            objectRigidBody.MoveRotation(Quaternion.SlerpUnclamped(transform.rotation, direction, rotationTime));
 
         } else {
 
@@ -88,61 +96,7 @@ public class MoveControl: MonoBehaviour
             if (rotationTime != 0) {
                 rotationTime = 0;
             }
+
         }
-
-        // Verifica se o vetor de direção do input sofreu alteração
-        if (previousDirection != directionVector) { // Change direction
-            //Debug.Log("Change Direction");
-
-            // Aumenta lentamente o valor até 1 para que a rotação ocorra lentamente até que se chegue na direção desejada e não continue mais
-            if (rotationTime < 1) {
-                rotationTime += Time.deltaTime;
-
-                if (rotationTime > 1) {
-                    rotationTime = 1;
-                }
-            }
-
-            // Rotaciona o objeto na direção desejada
-            objectRigidBody.MoveRotation(Quaternion.SlerpUnclamped(transform.rotation, direction, rotationTime));
-
-            previousDirection = directionVector;
-
-        } else {
-            //Debug.Log("Continue in Direction");
-        }
-
-        // Aumenta lentamente o valor até 1 para que a rotação ocorra lentamente até que se chegue na direção desejada e não continue mais
-        /*if (rotationTime < 1) {
-                rotationTime += Time.deltaTime;
-
-                if (rotationTime > 1) {
-                    rotationTime = 1;
-                }
-            }
-
-            // Calcula a direção que o objeto deve se rotacionar
-            directionVector = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-
-            if (previousDirection != directionVector) {
-                Debug.Log("Change Direction");
-                previousDirection = directionVector;
-            }
-
-            // Pega o angulo com seu respectivo sinal a partir da posição do objeto e a direção desejada
-            // O vetor de posição do objeto está normalizado se resumindo ao seu vetor canônico (0s e 1s)
-            // O vetor da direção desejada está transformado em coordenadas globais e apoiados com referência ao objeto suporte
-           //float angle = Vector3.SignedAngle(transform.position.normalized, objectAxisSupport.transform.TransformDirection(directionVector).normalized, Vector3.up);
-
-            Debug.Log(angle);
-
-            // Direção do vetor em Quaternions
-            //Quaternion direction = Quaternion.Euler(0, angle, 0);
-
-            // Rotaciona o objeto na direção desejada
-            objectRigidBody.MoveRotation(Quaternion.SlerpUnclamped(transform.rotation, direction, rotationTime));  
-            */
-        
-
     }
 }

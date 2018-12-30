@@ -14,9 +14,10 @@ public class Pedestal: CrystalPedestalMechanic
     {
         foreach (Transform child in collision.gameObject.GetComponentInChildren<Transform>()) {
 
-            if (collision.gameObject.CompareTag("Physical Body") && this.Type == TipoCristal.Fisico ||
-            collision.gameObject.CompareTag("Spirit Body") && this.Type == TipoCristal.Espiritual) {
+            if (child.gameObject.CompareTag("Physical Body") && this.Type == TipoCristal.Fisico ||
+            child.gameObject.CompareTag("Spirit Body") && this.Type == TipoCristal.Espiritual) {
                 if (this.PlayerInventory.CheckIfCrystalAvailable(this.Type)) {
+
                     Crystal crystalInInventory = PlayerInventory.RetriveCrystalToPedestal(this.Type);
 
                     IsCrystalInPedestal = true;
